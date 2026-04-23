@@ -1,4 +1,6 @@
 import AppRoutes from './routes/AppRoutes'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
  
@@ -480,6 +482,7 @@ function App() {
   return (
     <div>
       <style>{globalStyles}</style>
+      <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar closeOnClick pauseOnHover draggable theme="dark" />
       <AppRoutes />
     </div>
   )

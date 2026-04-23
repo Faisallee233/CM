@@ -1,10 +1,11 @@
 import { useState } from "react"; 
+import { toast} from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-function Login({  setIsLoggedIn, showToast }) {
+function Login({  setIsLoggedIn }) {
   const [f, setF] = useState({ email:"", pass:"" });
   const navigate = useNavigate();
-  const submit = () => { setIsLoggedIn(true); showToast("✅ Welcome back!"); navigate("/dashboard"); };
+  const submit = () => { setIsLoggedIn(true); toast.success("✅ Welcome back!"); navigate("/dashboard"); };
   return (
     <div className="page" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
       <div className="form-card">
